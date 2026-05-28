@@ -6,7 +6,7 @@ import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://crest2033.fr",
+  site: "https://radiopapote.fr",
   vite: {
     plugins: [tailwindcss()]
   },

@@ -34,3 +34,11 @@
     font-family: var(--font-heading);
   }
 }
+
+body {
+  main {
+    aside.main-aside {
+      margin-top: 0px;
+    }
+  }
+}

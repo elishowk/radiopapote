@@ -2,37 +2,48 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-avec-dark text-avec-gray-light mt-16">
+<footer class="bg-avec-dark text-avec-gray-light mt-8">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
-        <h3 class="font-heading font-bold text-white text-lg mb-3">
-          Crest2033.fr
-        </h3>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="/logo-radiopapote.png" alt="Radio Papote" class="h-10 w-auto" />
+          <h3 class="font-heading font-bold text-white text-lg">Radio Papote</h3>
+        </div>
         <p class="text-sm text-avec-gray leading-relaxed">
-          Site citoyen de suivi des engagements de la majorité municipale élue en mars 2026.
-          Ce site est indépendant et collaboratif.
+          Débat politique de la vallée de la Drôme, sur Radio Saint Ferréol 94.2 FM.
+          Tous les 2<sup>e</sup> et 4<sup>e</sup> vendredis du mois à 21h.
         </p>
       </div>
       <div>
         <h4 class="font-heading font-bold text-white mb-3">Liens</h4>
         <ul class="space-y-2 text-sm">
           <li>
-            <a href="https://www.crest2026.fr/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.instagram.com/radiopapote/" target="_blank" rel="noopener noreferrer"
               class="hover:text-avec-gold transition-colors">
-              Site de campagne AVEC
+              Instagram @radiopapote
             </a>
           </li>
           <li>
-            <a href="https://www.crest2026.fr/programme" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.youtube.com/@radiopapote-26" target="_blank" rel="noopener noreferrer"
               class="hover:text-avec-gold transition-colors">
-              Programme complet
+              YouTube @radiopapote-26
             </a>
           </li>
           <li>
-            <a href="https://www.crest2026.fr/liste" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.radiosaintfe.com/emissions/liste/detail/radio-papote" target="_blank" rel="noopener noreferrer"
               class="hover:text-avec-gold transition-colors">
-              L'équipe
+              Radio Saint Ferréol 94.2 FM
+            </a>
+          </li>
+          <li>
+            <a href="/engagements" class="hover:text-avec-gold transition-colors">
+              Suivi des engagements municipaux
+            </a>
+          </li>
+          <li>
+            <a href="/engagements#charte" class="hover:text-avec-gold transition-colors">
+              Charte des élu·es
             </a>
           </li>
         </ul>
@@ -40,23 +51,12 @@ const year = new Date().getFullYear();
       <div>
         <h4 class="font-heading font-bold text-white mb-3">Contribuer</h4>
         <p class="text-sm text-avec-gray leading-relaxed mb-4">
-          Ce site est open source. Vous pouvez contribuer en signalant des avancées,
-          en commentant ou en votant pour les engagements prioritaires.
+          Ce site est open source. Vous pouvez contribuer en signalant des avancées
+          ou en proposant des améliorations.
         </p>
         <div class="flex flex-col gap-2">
           <a
-            href="https://github.com/elishowk/crest2033/fork"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-3 py-2 bg-white/10 hover:bg-white/15 rounded-lg text-sm font-semibold text-white transition-colors w-fit"
-          >
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-              <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z" />
-            </svg>
-            Fork & proposer une amélioration
-          </a>
-          <a
-            href="https://github.com/elishowk/crest2033/issues/new"
+            href="https://github.com/elishowk/radiopapote/issues/new"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 text-sm text-avec-gray hover:text-avec-gold transition-colors"
@@ -68,36 +68,20 @@ const year = new Date().getFullYear();
             Signaler un problème
           </a>
           <a
-            href="https://github.com/elishowk/crest2033"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sm text-avec-gray hover:text-avec-gold transition-colors"
-          >
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-              <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-            </svg>
-            Code source sur GitHub
-          </a>
-          <a
-            href="mailto:contact@crest2033.fr"
+            href="mailto:contact@radiopapote.fr"
             class="inline-flex items-center gap-2 text-sm text-avec-gray hover:text-avec-gold transition-colors"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
               <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
               <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
             </svg>
-            contact@crest2033.fr
+            contact@radiopapote.fr
           </a>
         </div>
       </div>
     </div>
-    <div class="border-t border-avec-terracotta/40 mt-8 pt-6 mb-6">
-      <p class="text-center text-sm font-semibold text-avec-gold leading-relaxed">
-        Ce site est une initiative citoyenne indépendante de la municipalité de Crest et de la liste AVEC.
-      </p>
-    </div>
-    <div class="text-center text-xs text-avec-gray">
-      <p>&copy; {year} — <a href="https://crest2033.fr" class="hover:text-avec-gold transition-colors">crest2033.fr</a> — Données issues du programme officiel.</p>
+    <div class="border-t border-white/10 mt-8 pt-6 text-center text-xs text-avec-gray">
+      <p>&copy; {year} — <a href="https://radiopapote.fr" class="hover:text-avec-gold transition-colors">radiopapote.fr</a></p>
     </div>
   </div>
 </footer>

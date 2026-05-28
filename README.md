@@ -1,8 +1,8 @@
-# crest2033.fr — Suivi des engagements de la majorité municipale de Crest
+# radiopapote.fr
 
-**[crest2033.fr](https://crest2033.fr)** — Site citoyen et collaboratif de suivi des promesses de campagne de la majorité municipale de Crest (Drôme), élue en mars 2026.
+**[radiopapote.fr](https://radiopapote.fr)** — Site citoyen et collaboratif de suivi des promesses de campagne de la majorité municipale de Crest (Drôme), élue en mars 2026.
 
-Contact : [contact@crest2033.fr](mailto:contact@crest2033.fr)
+Contact : [contact@radiopapote.fr](mailto:contact@radiopapote.fr)
 
 ## Fonctionnalités
 
@@ -43,10 +43,10 @@ Chaque fichier contient un frontmatter avec :
 npm run build
 ```
 
-Le site statique est généré dans `dist/`. Déployez-le sur Netlify, Vercel, GitHub Pages ou tout hébergeur statique pointant vers `crest2033.fr`.
+Le site statique est généré dans `dist/`. Déployez-le sur Netlify, Vercel, GitHub Pages ou tout hébergeur statique pointant vers `radiopapote.fr`.
 
 ## Licence
 
 Ce projet est open source. Les données du programme sont issues du [site officiel de campagne](https://www.crest2026.fr/).
 
-Hébergé sur [crest2033.fr](https://crest2033.fr) — contact@crest2033.fr
+Hébergé sur [radiopapote.fr](https://radiopapote.fr) — contact@radiopapote.fr

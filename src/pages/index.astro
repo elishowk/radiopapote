@@ -1,66 +1,41 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import PromiseCard from "../components/PromiseCard.astro";
-import GlobalProgress from "../components/GlobalProgress.astro";
-
-const promesses = (await getCollection("promesses")).sort(
-  (a, b) => a.data.order - b.data.order,
-);
-
-const allActions = promesses.flatMap((p) => p.data.actions);
-const totalActions = allActions.length;
-const doneActions = allActions.filter((a) => a.done).length;
-const inProgressPromises = promesses.filter(
-  (p) => p.data.status === "en-cours" || p.data.status === "avancee",
-).length;
+import RadioPapote from "../components/RadioPapote.astro";
 ---
 
-<Layout title="Suivi des engagements">
-  <section class="bg-gradient-to-br from-avec-warm via-white to-avec-cream py-12 sm:py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-avec-dark leading-tight mb-4">
-          Suivi des engagements de la
-          <span class="text-avec-terracotta">majorité municipale</span>
-        </h1>
-        <p class="text-lg text-avec-dark-light leading-relaxed mb-2">
-          Suivez l'avancée des promesses de campagne de la
-          majorité municipale de Crest, élue en mars 2026.
-        </p>
-        <p class="text-sm text-avec-gray">
-          Ce site citoyen et collaboratif permet de suivre, commenter et voter
-          pour les engagements qui vous tiennent à cœur.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10 mb-12">
-    <GlobalProgress
-      total={totalActions}
-      done={doneActions}
-      inProgress={inProgressPromises}
+<Layout
+  title="Radio Papote"
+  description="Débat politique de la vallée de la Drôme — tous les 2e et 4e vendredis du mois à 21h — 94.2FM Ferréol (Crest, 26)"
+>
+  <section class="w-full">
+    <img
+      src="/bandeau-radiopapote.jpeg"
+      alt="Radio Papote — Débat politique de la vallée de la Drôme, tous les 2e et 4e vendredis du mois à 21h"
+      class="w-full object-cover"
     />
   </section>
 
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-    <h2 class="font-heading font-bold text-2xl text-avec-dark mb-8">
-      Les engagements du programme
-    </h2>
+  <RadioPapote />
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {promesses.map((promesse) => (
-        <PromiseCard
-          id={promesse.id}
-          title={promesse.data.title}
-          icon={promesse.data.icon}
-          description={promesse.data.description}
-          progress={promesse.data.progress}
-          status={promesse.data.status}
-          actions={promesse.data.actions}
-        />
-      ))}
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="rounded-2xl bg-gradient-to-br from-avec-warm to-avec-cream border border-avec-gray-light p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+      <div class="flex-1">
+        <h2 class="font-heading font-bold text-xl text-avec-dark mb-2">
+          Suivi des engagements municipaux
+        </h2>
+        <p class="text-sm text-avec-gray leading-relaxed">
+          Suivez l'avancée des promesses de campagne de la majorité municipale de Crest, élue en mars 2026.
+        </p>
+      </div>
+      <a
+        href="/engagements"
+        class="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-avec-terracotta hover:bg-avec-terracotta-dark text-white rounded-xl text-sm font-semibold transition-colors"
+      >
+        Voir les engagements
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
     </div>
   </section>
 </Layout>
